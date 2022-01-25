@@ -1,10 +1,8 @@
-import axios from 'axios';
-
 class PokeService {
     _apiBase = 'https://pokeapi.co/api/v2/';
 
     async getResource(link) {
-        const res = await axios.get(`${this._apiBase}${link}`);
+        const res = await fetch(`${this._apiBase}${link}`);
 
         if (!res.ok) {
             throw new Error(`Couldn't get ${this._apiBase}${link}, recieved: ${res.status}`);

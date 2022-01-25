@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Box, Typography } from '@mui/material';
 
 const titleTextWrapper = () => ({
@@ -17,4 +17,4 @@ const TextSection = () => {
     );
 };
 
-export default memo(TextSection);
+export default TextSection;

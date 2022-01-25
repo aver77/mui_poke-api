@@ -1,22 +1,31 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Chip } from '@mui/material';
 
-const btnStyles = () => ({
+const btnStyles = (theme) => ({
     margin: '6px 6px 6px 0',
     padding: '20px', 
     color: 'white', 
-    backgroundColor: '#1986EC'
+    fontSize: '17px',
+    backgroundColor: '#1986EC',
+    [theme.breakpoints.down('sm')]: {
+        fontSize: '10px',
+        padding: '4px'
+    }
 })
 
-const Btn = ({text}) => {
+const Btn = ({text, nameHandler}) => {
+
+    const clickHandler = () => {
+        nameHandler(text)
+    }
+
     return (
         <Chip 
-            label="Clickable" 
-            sx={btnStyles} 
-        >
-            {text}
-        </Chip>
+            label={text} 
+            sx={btnStyles}
+            onClick={clickHandler} 
+        />
     );
 };
 
-export default Btn;
+export default memo(Btn);

@@ -1,7 +1,7 @@
-import React, { memo } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { Box, Typography } from '@mui/material';
 import clickIcon from '../../../../assets/images/clickIcon.png';
+import { Box, Typography } from '@mui/material';
 
 const titleTapWrapper = () => ({
     display: 'flex',
@@ -13,10 +13,10 @@ const TitleTapImage = styled.img`
     width: 24px;
     height: 30px;
 `;
-const titleTapTextWrapper = theme => ({
+const titleTapTextWrapper = () => ({
     width: '112px'
 });
-const titleTapText = theme => ({
+const titleTapText = () => ({
     fontSize: '12px',
     lineHeight: '100%',
 });
@@ -32,4 +32,4 @@ const TapSection = () => {
     );
 };
 
-export default memo(TapSection);
+export default TapSection;

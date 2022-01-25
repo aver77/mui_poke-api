@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from '@mui/material';
-import TapSection from './TapSection';
-import TextSection from './TextSection';
+import TapSection from './components/TapSection';
+import TextSection from './components/TextSection';
 
 const titleWrapper = () => ({
     display: 'flex',
@@ -9,7 +9,7 @@ const titleWrapper = () => ({
     alignItems: 'center'
 })
 
-const Title = () => {
+const TitleItem = () => {
     return (
         <Box sx={titleWrapper}>
             <TextSection/>
@@ -18,4 +18,4 @@ const Title = () => {
     );
 };
 
-export default Title;
+export default TitleItem;

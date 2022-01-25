@@ -2,9 +2,7 @@ import React, { memo } from 'react';
 import { Grid } from '@mui/material';
 
 const textWrapStyles = () => ({
-    marginTop: '44px',
-    fontSize: '17px',
-    color:' #A0A0A0'
+    color: '#A0A0A0'
 })
 
 const CardTextWrap = ({children}) => {

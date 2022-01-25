@@ -5,6 +5,7 @@ import { Error as ErrorIcon } from '@mui/icons-material';
 
 const ErrorWrapper = styled(Box)(() => ({
     display: 'flex',
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     height: '100%'

@@ -5,7 +5,7 @@ class ApiCalls {
     PS = new PokeService();
 
     pokeNames(errorHandler, loadingHandler, resultHandler) {
-        this.PS.getTenPokeList()
+        this.PS.getTenPokeList()   
             .then(res => {
                 const result = res.results
                 resultHandler(result);
@@ -21,12 +21,13 @@ class ApiCalls {
     pokeCharacteristics(name, errorHandler, loadingHandler, resultHandler) {
         this.PS.getPokeInfoByName(name)
             .then(res => {
+                const reqRes = res;
                 const result = {}
-                result.height = res.height;
-                result.moves = res.moves.length;
-                result.id = res.id;
-                result.img = res.sprites.front_shiny? res.sprites.front_shiny : res.sprites.front_default;
-                result.attack = res.stats[1].base_stat;
+                result.height = reqRes.height;
+                result.moves = reqRes.moves.length;
+                result.id = reqRes.id;
+                result.img = reqRes.sprites.front_shiny? reqRes.sprites.front_shiny : reqRes.sprites.front_default;
+                result.attack = reqRes.stats[1].base_stat;
                 resultHandler(result);
                 errorHandler(false);
                 loadingHandler(false);

@@ -1,9 +1,9 @@
 import React from 'react';
-import PokeContainer from '../modularComponents/PokeContainer';
+import Main from '../views/Main';
 
 const App = () => {
     return (
-        <PokeContainer/>
+        <Main/>
     );
 };
 
