@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+*.eot binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
